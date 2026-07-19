@@ -1,4 +1,5 @@
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -20,11 +21,25 @@ function Navbar() {
         </div>
 
         <nav className="hidden md:flex gap-8 text-white">
-          <a href="#">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">Team</a>
-          <a href="#">Gallery</a>
-          <a href="#">Contact</a>
+          <Link to="/" className="hover:text-cyan-400 transition">
+            Home
+          </Link>
+
+          <Link to="/projects" className="hover:text-cyan-400 transition">
+            Projects
+          </Link>
+
+          <Link to="/team" className="hover:text-cyan-400 transition">
+            Team
+          </Link>
+
+          <Link to="/gallery" className="hover:text-cyan-400 transition">
+            Gallery
+          </Link>
+
+          <Link to="/contact" className="hover:text-cyan-400 transition">
+            Contact
+          </Link>
         </nav>
 
         <button className="md:hidden text-white">
