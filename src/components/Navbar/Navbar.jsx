@@ -1,3 +1,4 @@
+import logo from "../../assets/images/logos/logo.png";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -6,11 +7,17 @@ function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
+        {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-cyan-500"></div>
+          <img
+            src={logo}
+            alt="LOV Logo"
+            className="w-14 h-14 object-contain drop-shadow-[0_0_20px_rgba(6,182,212,0.8)] transition duration-300 hover:scale-150"
+          />
 
           <div>
-            <h1 className="text-white font-bold text-xl">
+            <p>          </p>
+            <h1 className="text-white font-bold text-xl tracking-wide">
               LEGION OF VOCALS
             </h1>
 
@@ -20,6 +27,7 @@ function Navbar() {
           </div>
         </div>
 
+        {/* Navigation */}
         <nav className="hidden md:flex gap-8 text-white">
           <Link to="/" className="hover:text-cyan-400 transition">
             Home
@@ -42,6 +50,7 @@ function Navbar() {
           </Link>
         </nav>
 
+        {/* Mobile Menu */}
         <button className="md:hidden text-white">
           <Menu />
         </button>

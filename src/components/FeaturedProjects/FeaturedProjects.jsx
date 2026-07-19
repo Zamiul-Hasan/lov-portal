@@ -1,3 +1,7 @@
+import Card from "../UI/Card";
+import Button from "../UI/Button";
+import SectionTitle from "../UI/SectionTitle";
+import Container from "../UI/Container";
 import projects from "../../data/projects";
 
 function FeaturedProjects() {
@@ -16,23 +20,18 @@ function FeaturedProjects() {
 
   return (
     <section className="bg-slate-950 py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <Container>
 
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">
-            Featured Projects
-          </h2>
-
-          <p className="text-gray-400 mt-3">
-            Explore our latest Bangla anime dubbing projects.
-          </p>
-        </div>
+        <SectionTitle
+          title="Featured Projects"
+          subtitle="Explore our latest Bangla anime dubbing projects."
+        />
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <Card
               key={project.id}
-              className="bg-slate-900 rounded-2xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400 transition duration-300 hover:-translate-y-2"
+              className="overflow-hidden"
             >
               <img
                 src={project.image}
@@ -41,7 +40,6 @@ function FeaturedProjects() {
               />
 
               <div className="p-6">
-
                 <span
                   className={`inline-block px-3 py-1 rounded-full text-sm text-white ${getStatusColor(
                     project.status
@@ -58,16 +56,15 @@ function FeaturedProjects() {
                   {project.description}
                 </p>
 
-                <button className="mt-6 w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition">
+                <Button className="mt-6 w-full">
                   View Project
-                </button>
-
+                </Button>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }
