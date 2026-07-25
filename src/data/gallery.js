@@ -1,23 +1,72 @@
+import demonSlayerBanner from "../assets/images/temp/demon-slayer-banner.jpg";
+import soloLevelingBanner from "../assets/images/temp/solo-leveling-banner.jpg";
+import blueLockBanner from "../assets/images/temp/blue-lock-banner.jpg";
+
 const gallery = [
+  // ==========================
+  // Demon Slayer
+  // ==========================
+
   {
     id: 1,
-    image: "https://picsum.photos/600/400?random=1",
-    title: "Recording Session",
+    projectId: 1,
+    image: demonSlayerBanner,
+    title: "Official Bangla Dub Poster",
+    uploadedBy: "Legion of Vocals",
+    uploadDate: "02 January 2026",
   },
+
   {
     id: 2,
-    image: "https://picsum.photos/600/400?random=2",
-    title: "Voice Acting",
+    projectId: 1,
+    image: demonSlayerBanner,
+    title: "Recording Session",
+    uploadedBy: "Production Team",
+    uploadDate: "04 January 2026",
   },
+
   {
     id: 3,
-    image: "https://picsum.photos/600/400?random=3",
-    title: "Studio Setup",
+    projectId: 1,
+    image: demonSlayerBanner,
+    title: "Voice Cast Meeting",
+    uploadedBy: "Project Manager",
+    uploadDate: "06 January 2026",
   },
+
+  // ==========================
+  // Solo Leveling
+  // ==========================
+
   {
     id: 4,
-    image: "https://picsum.photos/600/400?random=4",
-    title: "Community Event",
+    projectId: 2,
+    image: soloLevelingBanner,
+    title: "Solo Leveling Poster",
+    uploadedBy: "Legion of Vocals",
+    uploadDate: "18 July 2026",
+  },
+
+  {
+    id: 5,
+    projectId: 2,
+    image: soloLevelingBanner,
+    title: "Recording Booth",
+    uploadedBy: "Audio Team",
+    uploadDate: "20 July 2026",
+  },
+
+  // ==========================
+  // Blue Lock
+  // ==========================
+
+  {
+    id: 6,
+    projectId: 3,
+    image: blueLockBanner,
+    title: "Official Key Visual",
+    uploadedBy: "Legion of Vocals",
+    uploadDate: "Coming Soon",
   },
 ];
 
